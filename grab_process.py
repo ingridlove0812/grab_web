@@ -45,7 +45,7 @@ class grab():
         table1 = pd.DataFrame.from_dict(dict1)
         table1.columns = col
         dict_final = {key: {} for key in ['table1','table2']}
-        dict_final['table1'] = table1.to_dict()
+        dict_final['table1'] = table1.to_dict(orient='records')
         dict_final['table2'] = dict2
         return dict_final
 
