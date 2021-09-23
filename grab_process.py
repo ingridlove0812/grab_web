@@ -47,6 +47,6 @@ class grab():
         dict_final = {key: {} for key in ['table1','table2']}
         dict_final['table1'] = table1.to_dict(orient='split')
         dict_final['table2'] = dict2
-        return dict_final
+        return json.loads(json.dumps(dict_final))
 
 # result = grab('2021/09/13','2021/09/14').run()
