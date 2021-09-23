@@ -44,6 +44,9 @@ class grab():
             l += 1
         table1 = pd.DataFrame.from_dict(dict1)
         table1.columns = col
-        return table1.to_dict(), dict2
+        dict_final = {key: {} for key in ['table1','table2']}
+        dict_final['table1'] = table1.to_dict()
+        dict_final['table2'] = dict2
+        return dict_final
 
-# d1, d2 = grab('2021/09/13','2021/09/14').run()
+# result = grab('2021/09/13','2021/09/14').run()
